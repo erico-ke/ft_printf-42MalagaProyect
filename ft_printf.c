@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
+/*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 19:37:11 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/14 21:33:20 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	inputmanager(char input, va_list args)
 	else if (input == 's')
 		return (ft_putstr_fd(va_arg(args, char *), 1));
 	else if (input == 'p')
-		return (voidptrwrite(va_arg(args, void *)));
+		return (voidptrwrite(va_arg(args, unsigned long long)));
 	else if (input == 'd')
 		return (ft_putnbr_fd(va_arg(args, int), 1));
 	else if (input == 'i')

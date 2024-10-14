@@ -3,21 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   printfhexautilities.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
+/*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 19:35:09 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/14 21:34:20 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	voidptrwrite(void *input)
+int	voidptrwrite(unsigned long long input)
 {
 	int	res;
 
 	ft_putstr_fd("0x", 1);
 	res = 2;
+	
 	res = hexaprint(input, 'x');
 	return (res);
 }
