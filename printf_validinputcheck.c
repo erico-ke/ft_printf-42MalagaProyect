@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printfhexautilities.c                              :+:      :+:    :+:   */
+/*   printf_validimputcheck.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 20:27:49 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 19:35:09 by erico-ke         ###   ########.fr       */
+/*   Created: 2024/10/11 16:58:46 by erico-ke          #+#    #+#             */
+/*   Updated: 2024/10/14 19:33:29 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	voidptrwrite(void *input)
+static int	auxcheckfunct(char c)
 {
-	int	res;
+	int		i;
+	char	*checker;
 
-	ft_putstr_fd("0x", 1);
-	res = 2;
-	res = hexaprint(input, 'x');
-	return (res);
+	i = 0;
+	checker = "cspdiuxX%";
+	while (checker[i])
+	{
+		if (c == checker[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-int	hexaprint(unsigned long long nbr, char c)
+int	validcheck(char const *to_check)
 {
-	unsigned long long	res;
+	int	i;
 
-	res = 0;
-	if (nbr > 16)
-		res += hexaprint(nbr / 16, c);
-	if (c == 'x')
-		ft_putchar_fd("0123456789abcdef"[nbr % 16], 1);
-	if(c == 'X')
-		ft_putchar_fd("0123456789ABCDEF"[nbr % 16], 1);
-	res ++;
-	return (res);
+	i = 0;
+	while (to_check[i])
+	{
+		if (to_check[i] == '%' && !auxcheckfunct(to_check[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }
