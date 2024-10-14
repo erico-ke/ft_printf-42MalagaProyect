@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 21:47:27 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:42:25 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	hexaprint(unsigned long long nbr, char c)
 	unsigned long long	res;
 
 	res = 0;
-	if (nbr > 16)
+	if (nbr >= 16)
 		res += hexaprint(nbr / 16, c);
 	if (c == 'x')
 		ft_putchar_fd("0123456789abcdef"[nbr % 16], 1);

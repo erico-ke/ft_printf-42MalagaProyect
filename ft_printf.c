@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 21:33:20 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/14 22:40:00 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_printf(char const *v_inputs, ...)
 	int		res;
 	va_list	args;
 
-	if (!validcheck(v_inputs))
+	if (validcheck(v_inputs) == 0)
 		return (0);
 	va_start(args, v_inputs);
 	i = 0;
