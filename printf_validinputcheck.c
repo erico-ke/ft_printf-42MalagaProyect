@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:58:46 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 18:03:07 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 19:17:05 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	ft_auxcheckfunct(char c)
 	char	*checker;
 
 	i = 0;
-	checker = "cspdiuxX%";
+	checker = "cspdiuxX";
 	while (checker[i])
 	{
 		if (c == checker[i])
@@ -35,7 +35,9 @@ int	ft_validcheck(char const *to_check)
 	i = 0;
 	while (to_check[i])
 	{
-		if (to_check[i] == '%' && ft_auxcheckfunct(to_check[i + 1]) == 0)
+		if (to_check[i] == '%'
+			&& (ft_auxcheckfunct(to_check[i + 1]) == 0
+				|| to_check[i + 1] != '%'))
 			return (0);
 		i++;
 	}

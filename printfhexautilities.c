@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 20:27:49 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 18:03:11 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 19:15:49 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ int	ft_voidptrwrite(unsigned long long input)
 {
 	int	res;
 
-	ft_putstr_fd("0x", 1);
-	res = 2;
-	res = ft_hexaprint(input, 'x');
+	if (!input)
+		return (ft_putstr_fd("(nil)", 1));
+	res = 0;
+	res += ft_putstr_fd("0x", 1);
+	res += ft_hexaprint(input, 'x');
 	return (res);
 }
 

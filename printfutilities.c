@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:04:13 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 18:03:17 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 19:09:42 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (!s)
+		return (ft_putstr_fd("(null)", 1));
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
@@ -53,15 +55,11 @@ int	ft_putnbr_fd(int n, int fd)
 	return (i);
 }
 
-int	ft_putnbrfforuinput_fd(int n, int fd)
+int	ft_putnbrfforuinput_fd(unsigned int n, int fd)
 {
 	int	i;
 
 	i = 0;
-	if (n == -2147483648)
-		return (ft_putstr_fd("2147483648", fd));
-	if (n < 0)
-		n = -n;
 	if (n >= 10)
 	{
 		i += ft_putnbr_fd(n / 10, fd);
