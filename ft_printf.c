@@ -6,11 +6,11 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 17:54:15 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 18:02:55 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	ft_inputmanager(char input, va_list args)
 {
@@ -60,9 +60,9 @@ int	ft_printf(char const *v_inputs, ...)
 	return (res);
 }
 
-int main(void)
+/* int main(void)
 {
-	ft_printf("Hola : %% %d %x %% %c ", -424, 343000, 'D');
+	ft_printf("Hola : %% %d pipipi, %x %% %c ", -424, 343000, 'D');
 	//no imprime el char final?????
 	return 0;
-}
+} */

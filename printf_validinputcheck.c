@@ -6,11 +6,11 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:58:46 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 17:54:01 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 18:03:07 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	ft_auxcheckfunct(char c)
 {

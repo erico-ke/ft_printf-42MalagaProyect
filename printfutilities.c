@@ -6,11 +6,11 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:04:13 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 19:37:01 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 18:03:17 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar_fd(char c, int fd)
 {
