@@ -2,19 +2,19 @@ NAME = libftprintf.a
 
 FLAGS = -Wall -Werror -Wextra
 
-FILES = ft_printf.c printf_validinputcheck.c printfhexautilities.c printfutilities.c
+SRCS = ft_printf.c printf_validinputcheck.c printfhexautilities.c printfutilities.c
 
-OBJS = $(FILES:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 LIB = ar rcs
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(LIB) $(NAME) $(OBJS)
+	$(LIB) $(NAME) $(OBJS) $?
 
-$(OBJS) : $(FILES)
-	gcc $(FLAGS) -c $(FILES)
+$(OBJS) : $(SRCS)
+	gcc $(FLAGS) -c $(SRCS) $?
 
 clean:
 	rm -f $(OBJS)
