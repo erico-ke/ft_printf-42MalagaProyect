@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 17:46:17 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:54:15 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_inputmanager(char input, va_list args)
 	else if (input == 's')
 		return (ft_putstr_fd(va_arg(args, char *), 1));
 	else if (input == 'p')
-		return (voidptrwrite(va_arg(args, unsigned long long)));
+		return (ft_voidptrwrite(va_arg(args, unsigned long long)));
 	else if (input == 'd')
 		return (ft_putnbr_fd(va_arg(args, int), 1));
 	else if (input == 'i')
@@ -27,9 +27,9 @@ static int	ft_inputmanager(char input, va_list args)
 	else if (input == 'u')
 		return (ft_putnbrfforuinput_fd(va_arg(args, int), 1));
 	else if (input == 'x')
-		return (hexaprint(va_arg(args, unsigned int), input));
+		return (ft_hexaprint(va_arg(args, unsigned int), input));
 	else if (input == 'X')
-		return (hexaprint(va_arg(args, unsigned int), input));
+		return (ft_hexaprint(va_arg(args, unsigned int), input));
 	else if (input == '%')
 		return (ft_putchar_fd('%', 1));
 	return (0);
@@ -41,7 +41,7 @@ int	ft_printf(char const *v_inputs, ...)
 	int		res;
 	va_list	args;
 
-	if (validcheck(v_inputs) == 1)
+	if (ft_validcheck(v_inputs) == 1)
 		return (0);
 	va_start(args, v_inputs);
 	i = 0;
@@ -51,7 +51,7 @@ int	ft_printf(char const *v_inputs, ...)
 		if (v_inputs[i] == '%')
 		{
 			i++;
-			res += inputmanager(v_inputs[i], args);
+			res += ft_inputmanager(v_inputs[i], args);
 		}
 		else
 			res += ft_putchar_fd(v_inputs[i], 1);

@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:58:46 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 17:45:56 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:54:01 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_validcheck(char const *to_check)
 	i = 0;
 	while (to_check[i])
 	{
-		if (to_check[i] == '%' && auxcheckfunct(to_check[i + 1]) == 0)
+		if (to_check[i] == '%' && ft_auxcheckfunct(to_check[i + 1]) == 0)
 			return (0);
 		i++;
 	}
