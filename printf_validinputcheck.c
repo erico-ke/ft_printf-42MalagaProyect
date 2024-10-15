@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   printf_validinputcheck.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 16:58:46 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/14 23:20:07 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/15 17:45:56 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int	auxcheckfunct(char c)
+static int	ft_auxcheckfunct(char c)
 {
 	int		i;
 	char	*checker;
@@ -28,7 +28,7 @@ static int	auxcheckfunct(char c)
 	return (0);
 }
 
-int	validcheck(char const *to_check)
+int	ft_validcheck(char const *to_check)
 {
 	int	i;
 
