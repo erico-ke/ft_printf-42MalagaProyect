@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
+/*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 19:16:09 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/16 15:12:06 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ int	ft_printf(char const *v_inputs, ...)
 			res += ft_putchar_fd(v_inputs[i], 1);
 		i++;
 	}
+	va_end(args);
 	return (res);
 }
