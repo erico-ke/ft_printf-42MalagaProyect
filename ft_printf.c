@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erico-ke <erico-ke@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:45:33 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/16 15:12:06 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:28:51 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ int	ft_printf(char const *v_inputs, ...)
 	int		res;
 	va_list	args;
 
-	if (ft_validcheck(v_inputs) == 1)
-		return (0);
 	va_start(args, v_inputs);
 	i = 0;
 	res = 0;

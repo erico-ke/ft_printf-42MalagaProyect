@@ -6,7 +6,7 @@
 /*   By: erico-ke <erico-ke@42malaga.student.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:26:26 by erico-ke          #+#    #+#             */
-/*   Updated: 2024/10/15 19:08:38 by erico-ke         ###   ########.fr       */
+/*   Updated: 2024/10/17 15:28:26 by erico-ke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdarg.h>
 
-int	ft_validcheck(char const *to_check);
 int	ft_putchar_fd(char c, int fd);
 int	ft_putstr_fd(char *s, int fd);
 int	ft_putnbr_fd(int n, int fd);

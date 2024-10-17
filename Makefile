@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS = ft_printf.c printf_validinputcheck.c printfhexautilities.c printfutilities.c
+SRCS = ft_printf.c printfhexautilities.c printfutilities.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -14,7 +14,7 @@ $(NAME) : $(OBJS)
 	$(LIB) $(NAME) $(OBJS) $?
 
 $(OBJS) : $(SRCS)
-	gcc $(FLAGS) -c $(SRCS) $?
+	cc $(FLAGS) -c $(SRCS) $?
 
 clean:
 	rm -f $(OBJS)
