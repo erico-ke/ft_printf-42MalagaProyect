@@ -15,7 +15,7 @@ ft\_printf es un proyecto de 42 que consiste en recrear la famosa función `prin
 Clona este repositorio en tu directorio local:
 
 ```bash
-$ git clone https://github.com/erico-ke/Printf.git
+$ git clone https://github.com/erico-ke/ft_printf-42MalagaProyect.git
 $ cd ft_printf
 ```
 
